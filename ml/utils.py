@@ -3,6 +3,33 @@ import rasterio
 
 
 def calculate_additional_features(red, green, blue, nir):
+    """
+    calculate_additional_features(red, green, blue, nir)
+
+    This function calculates various vegetation and water indices, as well as texture features, from multi-spectral image data. These indices are useful in remote sensing applications for analyzing vegetation health, water content, and other environmental features.
+
+    Parameters:
+        red (np.array):
+            The red band data from the image.
+        green (np.array):
+            The green band data from the image.
+        blue (np.array):
+            The blue band data from the image.
+        nir (np.array):
+            The near-infrared (NIR) band data from the image.
+
+    Returns:
+        tuple:
+            A tuple of calculated indices and features, including:
+            - NDVI (Normalized Difference Vegetation Index)
+            - EVI (Enhanced Vegetation Index)
+            - SAVI (Soil Adjusted Vegetation Index)
+            - NDWI (Normalized Difference Water Index)
+            - SR (Simple Ratio)
+            - GNDVI (Green Normalized Difference Vegetation Index)
+            - entropy_red (Texture feature based on local entropy for the red band)
+            - entropy_nir (Texture feature based on local entropy for the NIR band)
+    """
     # Existing NDVI calculation
     ndvi = (nir - red) / (1e-3 + nir + red)
 
