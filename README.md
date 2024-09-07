@@ -1,5 +1,12 @@
+### Пайплайн
+![pipline.png](assets/pipline.png)
+
+### Архитектура продового решения
+![architecture.png](assets/architecture.png)
+
 ### ML:
-- инференс находиться [тут](ml/pipeline.py)
+- инференс находиться [тут](ml/notebooks/inference.ipynb)
+- обучение находиться [тут](ml/notebooks/boost.ipynb)
 
 ### Как запускать:
 - скопировать `.docker/.env.example` в `.docker/.env` и заполнить информацией
