@@ -4,6 +4,8 @@ from fastapi import FastAPI
 from loguru import logger
 from starlette.middleware.cors import CORSMiddleware
 
+from routing.v1.main import router as main_router
+
 from configs.Environment import get_environment_variables
 
 
@@ -17,6 +19,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+app.include_router(main_router)
 
 env = get_environment_variables()
 
