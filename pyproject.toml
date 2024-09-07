@@ -6,7 +6,7 @@ authors = ["kirill <w_shkolenko@mail.ru>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 fastapi = {extras = ["all"], version = "^0.103.0"}
 alembic = "^1.11.3"
 loguru = "^0.7.0"
